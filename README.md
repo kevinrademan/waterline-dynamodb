@@ -90,8 +90,8 @@ module.exports = {
         name: {type: 'string', unique: true, primaryKey: true},
         age: {type: 'integer', rangeKey: true, defaultsTo: 1},
         extraInfo: {type: 'json'},
-        nickname: {type: 'string', globalIndex: true, indexName: 'NickBirth', hashKey: true},
-        birthday: {type: 'date', globalIndex: true, indexName: 'NickBirth', rangeKey: true}
+        nickname: {type: 'string',index: { globalIndex: true, indexName: 'NickBirth', hashKey: true}},
+        birthday: {type: 'date',index: { globalIndex: true, indexName: 'NickBirth', rangeKey: true}}
     }
 };
 
